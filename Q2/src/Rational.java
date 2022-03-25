@@ -21,8 +21,8 @@ public class Rational {
         return this.q;
     }
 
-    public String toString(){
-        return this.p+"/"+this.q;
+    public String toString() {
+        return this.p + "/" + this.q;
     }
 
     public boolean greaterThan(Rational other) {
@@ -34,31 +34,43 @@ public class Rational {
     }
 
     public Rational plus(Rational other) {// a/b+c/d= (ad+bc)/bd
-        int newNumerator= this.p*other.q +this.q*other.p;
-        int newDenominator= this.q*other.q;
-        return new Rational(newNumerator,newDenominator);
+        int newNumerator = this.p * other.q + this.q * other.p;
+        int newDenominator = this.q * other.q;
+        return new Rational(newNumerator, newDenominator);
     }
+
     public Rational minus(Rational other) {// a/b-c/d= (ad-bc)/bd => (ad+bc-2bc)/bd so its the same denominator but -2bc/bd from the plus
         Rational plus = this.plus(other);
-        int newNumerator=plus.p-2*this.q*other.p;
-        return new Rational(newNumerator,plus.q);
+        int newNumerator = plus.p - 2 * this.q * other.p;
+        return new Rational(newNumerator, plus.q);
     }
 
     public Rational multiply(Rational other) { // (a/b) * (c/d) = (a*c)/(b*d)
-        int newNumerator= this.p*other.p ;
-        int newDenominator= this.q*other.q;
-        return new Rational(newNumerator,newDenominator);
+        int newNumerator = this.p * other.p;
+        int newDenominator = this.q * other.q;
+        return new Rational(newNumerator, newDenominator);
     }
 
     public Rational divide(Rational other) throws ArithmeticException {
-        if (other.p==0 ){
+        if (other.p == 0) {
             throw new ArithmeticException();
         }
-        int newNumerator= this.p*other.q ;
-        int newDenominator= this.q*other.p;
-        return new Rational(newNumerator,newDenominator);
+        int newNumerator = this.p * other.q;
+        int newDenominator = this.q * other.p;
+        return new Rational(newNumerator, newDenominator);
     }
-//    public Rational reduce() {
-//        return
-//    }
+
+    public Rational reduce() {
+        int gcdNum=gcd(this.p,this.q);
+        int newNumerator = this.p / gcdNum;
+        int newDenominator = this.q / gcdNum;
+        return new Rational(newNumerator, newDenominator);
+    }
+
+    private int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }
+
+
 }

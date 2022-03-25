@@ -7,6 +7,7 @@ public class Main {
         int p, q;
         Rational num = null;
         Rational operations= null;
+        Rational reduce= null;
         boolean flag=true;
         while (flag){
             System.out.println("please enter two numbers numerator and a denominator");
@@ -25,20 +26,28 @@ public class Main {
             }
             flag=false; //we got a valid input
         }
-        Rational other= new Rational(0,3);
+        Rational other= new Rational(1,3);
         boolean result = num.greaterThan(other);
         System.out.println("does num is grater than other?" + result);
         result = num.equals(other);
         System.out.println("does num is equals to other?" + result);
         operations= num.plus(other);
         System.out.println("The sum of num and other is " + operations.toString());
+        reduce=operations.reduce();
+        System.out.println("The reduced sum of num and other is " + reduce.toString());
         operations=num.minus(other);
         System.out.println("The minus of num and other is " + operations.toString());
+        reduce=operations.reduce();
+        System.out.println("The reduced minus of num and other is " + reduce.toString());
         operations=num.multiply(other);
         System.out.println("The multiply of num and other is " + operations.toString());
+        reduce=operations.reduce();
+        System.out.println("The reduced multiply of num and other is " + reduce.toString());
         try{
             operations=num.divide(other);
             System.out.println("The divide of num and other is " + operations.toString());
+            reduce=operations.reduce();
+            System.out.println("The reduced divide of num and other is " + reduce.toString());
         } catch (ArithmeticException e) {
             System.out.println("Impossible to divide in 0");
         }
