@@ -70,9 +70,8 @@ public class Dog extends Mammal implements Cloneable {
 
     //This method returns a string with all the dog details using inheritance from mammal and animals classes
     public String toString(){
-        return "The Dog "+super.toString()+" his owner is: "+this.owner.toString();
+        return "The Dog "+super.toString()+" his owner is:"+this.owner.toString();
     }
-
 
     //Overriding the clone method
     protected Object clone() throws CloneNotSupportedException {

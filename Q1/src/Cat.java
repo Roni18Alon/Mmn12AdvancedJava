@@ -66,7 +66,7 @@ public class Cat extends Mammal implements Cloneable {
 
     //This method returns a string with all the dog details using inheritance from mammal and animals classes
     public String toString() {
-        return "The Cat " + super.toString() + " his owner is: " + this.catOwner.toString();
+        return "The Cat " + super.toString() + " his owner is:" + this.catOwner.toString();
     }
 
     //Overriding the clone method

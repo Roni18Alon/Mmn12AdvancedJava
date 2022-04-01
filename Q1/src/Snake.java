@@ -60,7 +60,7 @@ public class Snake extends Reptile implements Cloneable{
     }
     //This method returns a string with all the alligator details using inheritance from Reptile and animals classes
     public String toString() {
-        return "The Snake " + super.toString() + " his owner is: " + this.snakeOwner.toString();
+        return "The Snake " + super.toString() + " his owner is:" + this.snakeOwner.toString();
     }
 
     //Overriding the clone method

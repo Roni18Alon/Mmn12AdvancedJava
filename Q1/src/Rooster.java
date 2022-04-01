@@ -42,8 +42,12 @@ public class Rooster extends Poultry implements Cloneable {
     }
 
     public void goFly() {
-        System.out.println(super.name + " the rooster can fly? " + canFly);
+        if (roosterFly) {
+            System.out.println(super.name+ " the rooster is Flying");
+        }
+        else System.out.println(super.name+ " the rooster can't Fly");
     }
+
     //returns a string of the animal type
     public String getAnimalType() {
         return "Rooster";

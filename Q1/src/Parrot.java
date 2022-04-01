@@ -45,7 +45,10 @@ public class Parrot extends Poultry implements Cloneable{
     }
 
     public void goFly() {
-        System.out.println(super.name + " the duck can fly? " + canFly);
+        if (canFly) {
+            System.out.println(super.name+ " the parrot is Flying");
+        }
+        else System.out.println(super.name+ " the parrot can't Fly");
     }
 
     public Owner getParrotOwner(){

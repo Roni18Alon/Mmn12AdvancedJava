@@ -18,11 +18,11 @@ public class Duck extends Poultry implements Cloneable{
 
 
     public void sleep() {
-        System.out.println(super.name + " the duck is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The duck is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the duck is eating " + duckFood);
+        System.out.println(super.name + " The duck is eating " + duckFood);
     }
 
     public void makeSound() {
@@ -30,14 +30,17 @@ public class Duck extends Poultry implements Cloneable{
     }
 
     public void move() {
-        System.out.println(super.name + " the duck has " + numOfLegs+ " legs but he is mostly "+duckMove);
+        System.out.println(super.name + " The duck has " + numOfLegs+ " legs but he is mostly "+duckMove);
     }
 
     public void goFly() {
-        System.out.println(super.name + " the duck can fly? "+canFly);
+        if (duckFly) {
+            System.out.println(super.name+ " The duck is Flying");
+        }
+        else System.out.println(super.name+ " The duck can't Fly");
     }
 
-    //returns a string of the animal type
+    //returns a string of The animal type
     public String getAnimalType() {
         return "Duck";
     }
@@ -51,12 +54,12 @@ public class Duck extends Poultry implements Cloneable{
         Duck d = (Duck) obj;
         return super.equals(d) ;
     }
-    //This method returns a string with all the dog details using inheritance from poultry and animals classes
+    //This method returns a string with all The dog details using inheritance from poultry and animals classes
     public String toString() {
         return  "The duck " + super.toString() ;
     }
 
-    //Overriding the clone method
+    //Overriding The clone method
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
