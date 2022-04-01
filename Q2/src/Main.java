@@ -6,7 +6,6 @@ The class gets 2 rational numbers inputs from the user and use the Rational clas
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
 
 public class Main {
     public static void main(String[] args) {

@@ -71,7 +71,7 @@ public class Rational {
     }
     //reduce the rational number by Euclid algorithm
     public Rational reduce() {
-        int gcdNum=gcd(this.p,this.q);
+        int gcdNum=gcd(abs(this.p),this.q);
         int newNumerator = this.p / gcdNum;
         int newDenominator = this.q / gcdNum;
         return new Rational(newNumerator, newDenominator);
