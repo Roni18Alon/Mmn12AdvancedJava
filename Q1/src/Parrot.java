@@ -29,11 +29,11 @@ public class Parrot extends Poultry implements Cloneable{
     }
 
     public void sleep() {
-        System.out.println(super.name + " the parrot is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The parrot is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the parrot is eating " + parrotFood);
+        System.out.println(super.name + " The parrot is eating " + parrotFood);
     }
 
     public void makeSound() {
@@ -41,21 +41,21 @@ public class Parrot extends Poultry implements Cloneable{
     }
 
     public void move() {
-        System.out.println(super.name + " the parrot has " + numOfLegs + " legs but he is mostly " + parrotMove);
+        System.out.println(super.name + " The parrot has " + numOfLegs + " legs but he is mostly " + parrotMove);
     }
 
     public void goFly() {
         if (canFly) {
-            System.out.println(super.name+ " the parrot is Flying");
+            System.out.println(super.name+ " The parrot is Flying");
         }
-        else System.out.println(super.name+ " the parrot can't Fly");
+        else System.out.println(super.name+ " The parrot can't Fly");
     }
 
     public Owner getParrotOwner(){
         return this.parrotOwner;
     }
 
-    public void setparrotOwner(Owner other){
+    public void setParrotOwner(Owner other){
         this.parrotOwner=new Owner(other.getName(), other.getPhoneNumber());
     }
 
@@ -73,7 +73,7 @@ public class Parrot extends Poultry implements Cloneable{
         return super.equals(p) && this.parrotOwner.equals(p.parrotOwner) && this.canTalk == p.canTalk;
     }
 
-    //This method returns a string with all the dog details using inheritance from poultry and animals classes
+    //This method returns a string with all the parrot details using inheritance from poultry and animals classes
     public String toString() {
         return "The parrot " + super.toString() + " can talk: " + this.canTalk + " his owner: " + parrotOwner.toString();
     }
@@ -81,7 +81,7 @@ public class Parrot extends Poultry implements Cloneable{
     //Overriding the clone method
     protected Object clone() throws CloneNotSupportedException {
         Parrot cloned = (Parrot) super.clone();
-        cloned.setparrotOwner(cloned.parrotOwner);
+        cloned.setParrotOwner(cloned.parrotOwner);
         return cloned;
     }
 }

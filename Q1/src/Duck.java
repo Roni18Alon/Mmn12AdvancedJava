@@ -8,7 +8,7 @@ public class Duck extends Poultry implements Cloneable{
     private static final String duckFood = "seeds";
     private static final boolean duckFly=false;
     private static final int numOfLegs=2;
-    private static final String  duckMove = "swims";
+    private static final String duckMove = "swims";
     private static final int duckSleepingHours= 1;
 
     //constructor
@@ -54,7 +54,7 @@ public class Duck extends Poultry implements Cloneable{
         Duck d = (Duck) obj;
         return super.equals(d) ;
     }
-    //This method returns a string with all The dog details using inheritance from poultry and animals classes
+    //This method returns a string with all The duck details using inheritance from poultry and animals classes
     public String toString() {
         return  "The duck " + super.toString() ;
     }

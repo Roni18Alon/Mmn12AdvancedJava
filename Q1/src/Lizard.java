@@ -16,15 +16,15 @@ public class Lizard extends Reptile implements Cloneable {
     }
 
     public void creep() {
-        System.out.println(super.name + " the lizard "+super.move+" for "+creepDistance);
+        System.out.println(super.name + " The lizard "+super.move+" for "+creepDistance);
     }
 
     public void sleep() {
-        System.out.println(super.name + " the lizard is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The lizard is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the lizard is eating " + lizardFood);
+        System.out.println(super.name + " The lizard is eating " + lizardFood);
     }
 
     public void makeSound() {
@@ -32,7 +32,7 @@ public class Lizard extends Reptile implements Cloneable {
     }
 
     public void move() {
-        System.out.println(super.name + " the lizard is "+super.move+" he has "+ numOfLegs+" legs");
+        System.out.println(super.name + " The lizard is "+super.move+" he has "+ numOfLegs+" legs");
     }
 
     //returns a string of the animal type
@@ -48,7 +48,7 @@ public class Lizard extends Reptile implements Cloneable {
         Lizard l = (Lizard) obj;
         return super.equals(l) ;
     }
-    //This method returns a string with all the alligator details using inheritance from Reptile and animals classes
+    //This method returns a string with all the lizard details using inheritance from Reptile and animals classes
     public String toString(){
         return "The Lizard "+super.toString();
     }

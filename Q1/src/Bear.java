@@ -26,11 +26,11 @@ public class Bear extends Mammal implements Cloneable{
     }
 
     public void sleep() {
-        System.out.println(super.name + " the Bear is sleeping for " + bearSleepingHours + " hours");
+        System.out.println(super.name + " The Bear is sleeping for " + bearSleepingHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the Bear is eating " + bearFood);
+        System.out.println(super.name + " The Bear is eating " + bearFood);
     }
 
     public void makeSound() {
@@ -38,7 +38,7 @@ public class Bear extends Mammal implements Cloneable{
     }
 
     public void move() {
-        System.out.println("walk on" + numOfLegs);
+        System.out.println(super.name+" The Bear walk on " + numOfLegs);
     }
 
     //returns a string of the animal type
@@ -53,7 +53,7 @@ public class Bear extends Mammal implements Cloneable{
         Bear b = (Bear) obj;
         return super.equals(b) && this.habitatLocation.equals(b.habitatLocation);
     }
-    //This method returns a string with all the dog details using inheritance from mammal and animals classes
+    //This method returns a string with all the bear details using inheritance from mammal and animals classes
     public String toString(){
         return "The Bear "+super.toString()+" he lives in: "+this.habitatLocation;
     }

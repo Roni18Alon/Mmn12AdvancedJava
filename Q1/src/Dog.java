@@ -42,7 +42,7 @@ public class Dog extends Mammal implements Cloneable {
     }
 
     public void move() {
-        System.out.println("walk on"+numOfLegs);
+        System.out.println(super.name+" The Dog walk on " + numOfLegs);
     }
 
     public Owner getOwner(){

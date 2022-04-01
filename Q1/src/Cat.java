@@ -26,11 +26,11 @@ public class Cat extends Mammal implements Cloneable {
     }
 
     public void sleep() {
-        System.out.println(super.name + " the cat is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The cat is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the cat is eating " + catFood);
+        System.out.println(super.name + " The cat is eating " + catFood);
     }
 
     public void makeSound() {
@@ -38,7 +38,7 @@ public class Cat extends Mammal implements Cloneable {
     }
 
     public void move() {
-        System.out.println("walk on" + numOfLegs);
+        System.out.println(super.name+" The cat walk on " + numOfLegs);
     }
 
     public Owner getCatOwner() {
@@ -64,7 +64,7 @@ public class Cat extends Mammal implements Cloneable {
         //need to check if we have the same owner....
     }
 
-    //This method returns a string with all the dog details using inheritance from mammal and animals classes
+    //This method returns a string with all the cat details using inheritance from mammal and animals classes
     public String toString() {
         return "The Cat " + super.toString() + " his owner is:" + this.catOwner.toString();
     }

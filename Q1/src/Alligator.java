@@ -19,15 +19,15 @@ public class Alligator extends Reptile implements Cloneable {
 
 
     public void creep() {
-        System.out.println(super.name + " the alligator "+super.move+" for "+creepDistance);
+        System.out.println(super.name + " The alligator "+super.move+" for "+creepDistance);
     }
 
     public void sleep() {
-        System.out.println(super.name + " the alligator is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The alligator is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the alligator is eating " + alligatorFood);
+        System.out.println(super.name + " The alligator is eating " + alligatorFood);
     }
 
     public void makeSound() {
@@ -35,7 +35,7 @@ public class Alligator extends Reptile implements Cloneable {
     }
 
     public void move() {
-        System.out.println(super.name + " the alligator is "+super.move+" he has "+ numOfLegs+" legs");
+        System.out.println(super.name + " The alligator is "+super.move+" he has "+ numOfLegs+" legs");
     }
 
     public Owner getAlligatorOwner(){
@@ -46,7 +46,7 @@ public class Alligator extends Reptile implements Cloneable {
         this.alligatorOwner=new Owner(other.getName(), other.getPhoneNumber());
     }
 
-    //returns a string of the animal type
+    //returns a string of The animal type
     public String getAnimalType() {
         return "Alligator";
     }
@@ -61,12 +61,12 @@ public class Alligator extends Reptile implements Cloneable {
         return super.equals(a) ;
     }
 
-    //This method returns a string with all the alligator details using inheritance from Reptile and animals classes
+    //This method returns a string with all The alligator details using inheritance from Reptile and animals classes
     public String toString() {
         return  "The Alligator "+super.toString()+" his owner is:"+this.alligatorOwner.toString();
     }
 
-    //Overriding the clone method
+    //Overriding The clone method
     protected Object clone() throws CloneNotSupportedException {
         Alligator cloned = (Alligator) super.clone();
         cloned.setAlligatorOwner(cloned.alligatorOwner);

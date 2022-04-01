@@ -99,8 +99,11 @@ public class AnimalBoarding {
         for (int i = 0; i < animals.size(); i++) {
             tempAnimals = animals.get(i);
             System.out.println(tempAnimals.toString());
+            tempAnimals.makeSound();
             tempAnimals.eat();
             tempAnimals.sleep();
+            tempAnimals.move();
+
 
             if (tempAnimals instanceof Snake) {
                 ((Snake) tempAnimals).creep();

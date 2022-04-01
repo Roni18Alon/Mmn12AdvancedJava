@@ -56,6 +56,6 @@ public abstract class Reptile extends Animals {
     }
     //This method returns a string with all the Reptile details using inheritance animals classes
     public String toString(){
-        return super.toString()+"tail length: "+this.tailLength+"move like: "+this.move+"creep for: "+this.creepDistance;
+        return super.toString()+"tail length: "+this.tailLength+" move like: "+this.move+" creep for: "+this.creepDistance;
     }
 }

@@ -19,15 +19,15 @@ public class Snake extends Reptile implements Cloneable{
 
 
     public void creep() {
-        System.out.println(super.name + " the snake " + super.move + " for " + creepDistance);
+        System.out.println(super.name + " The snake " + super.move + " for " + creepDistance);
     }
 
     public void sleep() {
-        System.out.println(super.name + " the snake is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The snake is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the snake is eating " + snakeFood);
+        System.out.println(super.name + " The snake is eating " + snakeFood);
     }
 
     public void makeSound() {
@@ -35,7 +35,7 @@ public class Snake extends Reptile implements Cloneable{
     }
 
     public void move() {
-        System.out.println(super.name + " the snake is " + super.move + " he has " + numOfLegs + " legs");
+        System.out.println(super.name + " The snake is " + super.move + " he has " + numOfLegs + " legs");
     }
 
     public Owner getSnakeOwner() {
@@ -58,7 +58,7 @@ public class Snake extends Reptile implements Cloneable{
         Snake s = (Snake) obj;
         return super.equals(s) && this.snakeOwner.equals(s.snakeOwner);
     }
-    //This method returns a string with all the alligator details using inheritance from Reptile and animals classes
+    //This method returns a string with all the snake details using inheritance from Reptile and animals classes
     public String toString() {
         return "The Snake " + super.toString() + " his owner is:" + this.snakeOwner.toString();
     }

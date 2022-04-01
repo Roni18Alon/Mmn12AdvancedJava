@@ -26,11 +26,11 @@ public class Rooster extends Poultry implements Cloneable {
     }
 
     public void sleep() {
-        System.out.println(super.name + " the rooster is sleeping for " + super.animalSleepHours + " hours");
+        System.out.println(super.name + " The rooster is sleeping for " + super.animalSleepHours + " hours");
     }
 
     public void eat() {
-        System.out.println(super.name + " the rooster is eating " + roosterFood);
+        System.out.println(super.name + " The rooster is eating " + roosterFood);
     }
 
     public void makeSound() {
@@ -38,14 +38,14 @@ public class Rooster extends Poultry implements Cloneable {
     }
 
     public void move() {
-        System.out.println("walk on" + numOfLegs);
+        System.out.println(super.name+" The rooster walk on " + numOfLegs);
     }
 
     public void goFly() {
         if (roosterFly) {
-            System.out.println(super.name+ " the rooster is Flying");
+            System.out.println(super.name+ " The rooster is Flying");
         }
-        else System.out.println(super.name+ " the rooster can't Fly");
+        else System.out.println(super.name+ " The rooster can't Fly");
     }
 
     //returns a string of the animal type
@@ -62,7 +62,7 @@ public class Rooster extends Poultry implements Cloneable {
         return super.equals(r) && this.hourOfMorningCall.equals(r.hourOfMorningCall);
         //need to check if we have the same owner....
     }
-    //This method returns a string with all the dog details using inheritance from poultry and Animals classes
+    //This method returns a string with all the rooster details using inheritance from poultry and Animals classes
     public String toString() {
         return "The rooster " + super.toString() + " will wake you up in: " + this.hourOfMorningCall ;
     }
